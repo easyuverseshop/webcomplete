@@ -108,9 +108,7 @@ const Login = () => {
           </Link>
         </div>
 
-        <div className="p-3 bg-gray-50 dark:bg-slate-900/60 rounded-xl border border-gray-200 dark:border-slate-700/60 text-[11px] text-gray-500 text-center">
-          <strong>Default Admin Demo:</strong> admin@easyuverse.com / admin123
-        </div>
+      
       </div>
     </div>
   );
