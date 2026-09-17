@@ -74,11 +74,11 @@ const Navbar = ({ onOpenSupport, onOpenSearch }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-gray-200 dark:border-slate-800/80 transition-colors shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-gray-200 dark:border-slate-800/80 transition-colors shadow-sm overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* 1. Sabse Aage: AI Generated Logo Image */}
-          <Link to="/" className="flex items-center space-x-3 shrink-0 mr-4">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 shrink-0 mr-2 sm:mr-4">
             <Logo logoUrl="/logo.jpg" showText={true} />
           </Link>
 
@@ -305,16 +305,18 @@ const Navbar = ({ onOpenSupport, onOpenSearch }) => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center lg:hidden space-x-3">
-            <button onClick={onOpenSearch} className="p-2 text-gray-600 dark:text-gray-300">
+          <div className="flex items-center lg:hidden space-x-1 sm:space-x-2 shrink-0">
+            <button onClick={onOpenSearch} className="p-1.5 sm:p-2 text-gray-600 dark:text-gray-300 hover:text-indigo-600 transition-colors">
               <Search className="w-5 h-5" />
             </button>
-            <ThemeToggle />
+            <div className="scale-90 sm:scale-100">
+              <ThemeToggle />
+            </div>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-100 dark:bg-slate-900"
+              className="p-1.5 sm:p-2 text-gray-700 dark:text-gray-200 rounded-xl bg-gray-100 dark:bg-slate-900 border border-gray-200 dark:border-slate-800"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
